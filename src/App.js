@@ -68,7 +68,7 @@ function App() {
 
         {postedreview &&
           <div className={`mt-4 p-2 bg-slate-50 text-sm w-44 flex ${postedreview?.wasHelpful ? 'bg-green-100' : 'bg-red-100'}`}>
-            <div className='pr-2 flex items-center'>
+            <div className='pr-2 pt-1'>
               <IconContext.Provider value={{ color: `${postedreview?.wasHelpful ? 'rgb(34 197 94)' : 'rgb(239 68 68)'}`, size: `1.5em` }}>
                 {postedreview?.wasHelpful ?
                   <div><FiThumbsUp /></div> :
@@ -78,7 +78,7 @@ function App() {
             </div>
             <div className='text-xs w-full'>
               <div >{postedreview?.comment}</div>
-              <div className='flex justify-between items-center pt-2'>
+              <div className='flex justify-between items-center pt-4'>
                 <div>{postedreview?.createdAt && inputtime}</div>
                 <div>{postedreview?.id}</div>
               </div>
